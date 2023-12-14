@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/Logo.svg" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>News</title>
+    <style>
+      body {
+        background-color: #101239;
+      }
+      header {
+        background-color: #101239;
+        color: #fff;
+      }
+      nav ul li {
+        background-color: #101239;
+      }
+      nav ul li a {
+        color: #fff;
+      }
+      header div span img {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body id="news-body">
+    <header>
+      <div class="vector-line">
+        <span>
+          <img
+            src="./assets/diamond_square.svg"
+            alt="diamond_square_arrow"
+            class=""
+          />
+        </span>
+        <span>
+          <img
+            src="./assets/diamond_square2.svg"
+            alt="diamond_square_arrow"
+            class=""
+            id="arrow2"
+          />
+        </span>
+        <span>
+          <img
+            src="./assets/diamond_square3.svg"
+            alt="diamond_square_arrow"
+            class=""
+          />
+        </span>
+      </div>
+      <div class="header-links">
+        <div class="logo">
+          <img src="./assets/Logo.svg" alt="logo" width="76px" />
+        </div>
+
+        <nav>
+          <ul>
+            <li class="nav-link" data-page="home">
+              <a href="../home.html">Home</a>
+            </li>
+            <li class="nav-link" data-page="news">
+              <a href="./news.html">News</a>
+            </li>
+            <li id="nav-item" class="nav-link" data-page="projects">
+              <a href="../projects/projects.html"
+                >Projects
+                <span><img src="./assets/solar_arrow.svg" alt="" /></span
+              ></a>
+            </li>
+            <li id="nav-item" class="nav-link" data-page="about">
+              <a href="about">About us</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="contact-us-buttom">
+          <img src="./assets/contact_vector.svg" alt="" />
+          <a href="contact-us" class="contact-ancher">Contact us</a>
+        </div>
+      </div>
+    </header>
+    <img src="./assets/Rectangle 1.svg" id="rectangle1" />
+    <img src="./assets/Rectangle 1.svg" id="rectangle2" />
+    <img src="./assets/Polygon 1.svg" id="polygon" />
+    <section class="news-hero">
+      <div>
+        <div class="social-icons">
+          <img src="./assets/twitter.svg" alt="" />
+          <img src="./assets/instagram.svg" alt="" />
+          <img src="./assets/facebook.svg" alt="" />
+        </div>
+        <div class="news-content">
+          <p>FOLLOW US</p>
+          <h1>news</h1>
+        </div>
+        <div class="inspiration">
+          <h3>Inspirations</h3>
+          <p>
+            Providing the lates tips and ideas for business owners and
+            designers.
+          </p>
+        </div>
+      </div>
+    </section>
+    <script>
+      // JavaScript to add the 'current-page' class to the active link
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the current page URL
+        var currentPageUrl = window.location.href;
+
+        // Find the corresponding navigation link and add the 'current-page' class
+        var navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach(function (link) {
+          var pageIdentifier = link.getAttribute("data-page");
+
+          // Check if the current page URL contains the page identifier
+          if (currentPageUrl.includes(pageIdentifier)) {
+            link.classList.add("current-page");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
