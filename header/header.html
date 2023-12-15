@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header.css">
+    <title>header</title>
+</head>
+<body>
+    <header>
+        <img src="/assets/Logo.svg" alt="">
+        <div>
+            <ul>
+                <li class="home" ><a data-page="header.html" class="nav-link "   href="./header.html">Home</a></li>
+                <li class="vec" ><a class="nav-link" data-page="news" href="#">News</a></li>
+                <li class="vec" ><a class="nav-link" data-page="projects" href="#">Projects</a></li>
+                <li class="vec about" ><a class="nav-link" data-page="aboute" href="#">About</a></li>
+            </ul>
+        </div>
+        <button>Contact Us</button>
+    </header>
+    <script>
+         // JavaScript to add the 'current-page' class to the active link
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the current page URL
+        var currentPageUrl = window.location.href;
+        console.log(currentPageUrl)
+
+        // Find the corresponding navigation link and add the 'current-page' class
+        var navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach(function (link) {
+          var pageIdentifier = link.getAttribute("data-page");
+        
+
+          // Check if the current page URL contains the page identifier
+          if (currentPageUrl.includes(pageIdentifier)) {
+            link.classList.add("current-page");
+          }
+        });
+      });
+    </script>
+</body>
+</html>
