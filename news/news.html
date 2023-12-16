@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../assets/Logo.svg" />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="/news/news.css" />
     <title>News</title>
     <style>
       body {
@@ -14,10 +15,10 @@
         background-color: #101239;
         color: #fff;
       }
-      nav ul li {
-        background-color: #101239;
+      .nav .nav-list .nav-link .nav {
+        background: #101239;
       }
-      nav ul li a {
+      ul li a {
         color: #fff;
       }
       header div span img {
@@ -26,59 +27,35 @@
     </style>
   </head>
   <body id="news-body">
+    <div class="spinner-container" id="spinnerContainer">
+      <div class="spinner" id="loadingSpinner"></div>
+    </div>
     <header>
-      <div class="vector-line">
-        <span>
-          <img
-            src="./assets/diamond_square.svg"
-            alt="diamond_square_arrow"
-            class=""
-          />
-        </span>
-        <span>
-          <img
-            src="./assets/diamond_square2.svg"
-            alt="diamond_square_arrow"
-            class=""
-            id="arrow2"
-          />
-        </span>
-        <span>
-          <img
-            src="./assets/diamond_square3.svg"
-            alt="diamond_square_arrow"
-            class=""
-          />
-        </span>
+      <div class="logo-container">
+        <img src="../assets/Logo.svg" class="logo" alt="" />
       </div>
-      <div class="header-links">
-        <div class="logo">
-          <img src="./assets/Logo.svg" alt="logo" width="76px" />
-        </div>
-
-        <nav>
-          <ul>
-            <li class="nav-link" data-page="home">
-              <a href="../home.html">Home</a>
-            </li>
-            <li class="nav-link" data-page="news">
-              <a href="./news.html">News</a>
-            </li>
-            <li id="nav-item" class="nav-link" data-page="projects">
-              <a href="../projects/projects.html"
-                >Projects
-                <span><img src="./assets/solar_arrow.svg" alt="" /></span
-              ></a>
-            </li>
-            <li id="nav-item" class="nav-link" data-page="about">
-              <a href="about">About us</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="contact-us-buttom">
-          <img src="./assets/contact_vector.svg" alt="" />
-          <a href="contact-us" class="contact-ancher">Contact us</a>
-        </div>
+      <div class="nav">
+        <ul class="nav-list">
+          <li class="home nav-link">
+            <a data-page="home.html" class="nav-link" href="../home.html"
+              >Home</a
+            >
+          </li>
+          <li class="nav-link">
+            <a class="nav-link" data-page="news.html" href="news.html">News</a>
+          </li>
+          <li class="projects nav-link">
+            <a class="nav-link" data-page="projects" href="#"
+              >Projects <img src="assets/solar_arrow.svg" alt=""
+            /></a>
+          </li>
+          <li class="About nav-link">
+            <a class="nav-link" data-page="aboute" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+      <div class="bggray contact">
+        <a href="">Contact Us</a>
       </div>
     </header>
     <img src="./assets/Rectangle 1.svg" id="rectangle1" />
@@ -120,6 +97,22 @@
             link.classList.add("current-page");
           }
         });
+      });
+
+      // add loading spin
+      document.addEventListener("DOMContentLoaded", function () {
+        // Display the loading spinner when the page starts loading
+        var loadingSpinner = document.getElementById("loadingSpinner");
+        var spinnerContainer = document.getElementById("spinnerContainer");
+        loadingSpinner.style.display = "block";
+        spinnerContainer.style.display = "block";
+
+        // Simulate some asynchronous content loading (replace this with your actual loading logic)
+        setTimeout(function () {
+          // Hide the loading spinner when the content is loaded
+          loadingSpinner.style.display = "none";
+          spinnerContainer.style.display = "none";
+        }, 2000); // Adjust the duration as needed
       });
     </script>
   </body>

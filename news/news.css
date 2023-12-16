@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 6rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+.logo {
+  margin-left: 6px;
+}
+.logo-container {
+  width: 10rem;
+  height: 100%;
+  display: flex;
+}
+.logo-container::before {
+  content: url(assets/diamond_square.svg);
+  display: flex;
+  margin: auto;
+  margin-right: 0;
+  margin-left: 0;
+  /* height: 8px; */
+}
+.nav {
+  background: url(assets/diamond_square2.svg);
+  width: 70%;
+  height: 100%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.nav .nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  list-style: none;
+  margin: 0;
+  height: 100%;
+  padding-left: 6rem;
+}
+.nav .nav-list li {
+  text-align: center;
+  width: 6rem;
+  height: 3rem;
+  background: #101239;
+}
+.nav .nav-list .projects {
+  width: 8rem;
+}
+.nav .nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  width: 6rem;
+  height: 3rem;
+  display: flex;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: -8px; */
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17rem;
+  height: 100%;
+}
+.contact a {
+  margin-right: 8px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 22px;
+  color: #c826e4;
+  text-decoration: none;
+}
+.contact::after {
+  content: url(assets/diamond_square3.svg);
+  display: flex;
+  margin: auto;
+  margin-right: 0;
+}
+.contact a::before {
+  content: url(assets/contact_vector.svg);
+}
+
+/* sinner style*/
+.spinner-container {
+  width: 100%;
+  height: 240vh;
+  background-color: #101239;
+  position: absolute;
+  z-index: 1;
+}
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -25px;
+  display: none; /* Initially hide the spinner */
+  z-index: 1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
