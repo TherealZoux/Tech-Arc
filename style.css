@@ -63,7 +63,7 @@ header {
   display: flex;
   width: 100%;
   height: 6em;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding-top: 2rem;
 }
@@ -76,16 +76,19 @@ header {
   display: flex;
 }
 .logo-container::before {
-  content: url(../assets/diamond_square.svg);
+  content: "";
   display: flex;
   margin: auto;
   margin-right: 0;
   margin-left: 0;
-  /* height: 8px; */
+  background: url(../assets/diamond_square.svg);
+  height: 14px;
+  width: 5rem;
+  background-size: cover;
 }
 .nav {
   background: url(../assets/diamond_square2.svg);
-  width: 70%;
+  width: 77%;
   height: 100%;
   background-position-y: 50%;
   background-repeat: no-repeat;
@@ -135,8 +138,9 @@ header {
   height: 100%;
 }
 .contact a {
-  margin-right: 8px;
-  margin-left: 20px;
+  width: 11rem;
+  margin-right: 10px;
+  margin-left: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,10 +150,14 @@ header {
   text-decoration: none;
 }
 .contact::after {
-  content: url(../assets/diamond_square3.svg);
+  content: "";
   display: flex;
   margin: auto;
   margin-right: 0;
+  background: url(../assets/diamond_square3.svg);
+  background-size: cover;
+  height: 14px;
+  width: 5rem;
 }
 .contact a::before {
   content: url(../assets/contact_vector.svg);
@@ -171,10 +179,9 @@ header {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   padding: 100px 70px;
-  gap: 4rem;
 }
 .hero-section .hero-content {
   display: flex;
@@ -193,6 +200,8 @@ header {
   line-height: 33.692px; /* 66.331% */
 }
 .hero-section .hero-content p {
+  width: 640px;
+  height: 210px;
   color: #000;
 }
 .hero-section .hero-content button {
@@ -244,21 +253,33 @@ header {
 }
 
 .mission-section h1::before {
-  content: url(./assets/mission_before.svg);
+  content: "";
   padding-right: 1rem;
   display: flex;
-  width: 29rem;
+  height: 3px;
+  width: 45rem;
+  display: inline-flex;
+  margin: auto;
+  margin-right: 2rem;
+  background-color: #101239;
 }
 .mission-section h1::after {
-  content: url(./assets/mission_after.svg);
+  content: "";
   padding-left: 1rem;
   display: flex;
-  width: 29rem;
+  width: 45rem;
+  height: 3px;
+  display: inline-flex;
+  margin-left: 2rem;
+  margin: auto;
+  background-color: #101239;
 }
 
 .mission-container {
   display: flex;
   gap: 10rem;
+  justify-content: space-between;
+  width: 100%;
 }
 .mission-content {
   display: flex;
@@ -487,4 +508,118 @@ footer {
   font-style: normal;
   font-weight: 300;
   line-height: 24.7px; /* 154.375% */
+}
+
+/* form style */
+.form-section {
+  height: 45rem;
+  margin-top: 8rem;
+}
+.forms {
+  width: 60rem;
+  height: 36rem;
+  border: 2px #101239 solid;
+  border-radius: 0px 100px 0pc 0px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  border-color: #101239;
+}
+.forms h1 {
+  position: absolute;
+  top: -4%;
+  left: 4%;
+  font-size: 2rem;
+  width: 12rem;
+  color: #101239;
+  text-align: center;
+  background-color: #fff;
+}
+.contact-img {
+  width: 321.53px;
+  height: 490.19px;
+  margin-right: 30px;
+  margin-top: 2rem;
+}
+
+.input-data {
+  /* margin-bottom: 50px; */
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  padding-top: 8rem;
+  gap: 2rem;
+  width: 22rem;
+}
+
+.input-data input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 1px solid #101239;
+  outline: none;
+  display: flex;
+  padding: 1rem;
+}
+
+.input-data .button {
+  border: none;
+  padding: 20px;
+  border-radius: 50px;
+  font-size: 20px;
+  color: white;
+  width: 220px;
+  background-color: #c826e4;
+}
+
+.input-data .button:hover {
+  cursor: pointer;
+  background-color: #101239 solid;
+  border: 2px solid white;
+}
+
+.form-footer {
+  width: 33rem;
+  height: 5rem;
+  margin-left: 2rem;
+  /* background: red; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-footer div img {
+  width: 2rem;
+}
+
+.form-footer .form-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-left: 2.5rem;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 45rem;
+  padding-left: 2rem;
+}
+footer .footer-icons {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+footer .footer-data {
+  margin-top: 4rem;
 }
